@@ -10,5 +10,25 @@
   <%= @user.email %>
 </p>
 
+<h3>マイクロソフト一覧</h3>
+<table>
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>content</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @microposts.each do |micropost| %>
+    <tr>
+      <td><%= micropost.id %></td>
+      <td><%= micropost.content %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
